@@ -1,4 +1,3 @@
-Code source de Chat C du 23/02/14
 http://cedced19.wordpress.com
 
 Le chat est basique pour le moment.

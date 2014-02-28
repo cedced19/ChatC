@@ -1,5 +1,6 @@
 ﻿Imports System.Net.Sockets
 Imports System.IO
+Imports System.IO.File
 
 Public Class Client
     Private stream As NetworkStream
@@ -24,7 +25,7 @@ Public Class Client
                 streamr = New StreamReader(stream)
 
                 Me.Text = "Chat C : " & ip
-                Heure.Start()
+                Timer.Start()
 
                 streamw.WriteLine(nick)
                 streamw.WriteLine("Je viens de me connecté !")
@@ -72,11 +73,41 @@ Public Class Client
         End
     End Sub
 
-    Private Sub Heure_Tick(sender As Object, e As EventArgs) Handles Heure.Tick
+    Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles Timer.Tick
         Label1.Text = Date.Now.ToShortTimeString
     End Sub
 
+
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-        MsgBox("Oui il est bien :" & Label1.Text & " !", MsgBoxStyle.Information, "Information")
+        MsgBox("Oui il est bien : " & Label1.Text & " !", MsgBoxStyle.Information, "Information")
+    End Sub
+
+    Private Sub MettreAuPremierPlanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MettreAuPremierPlanToolStripMenuItem.Click
+        If Me.TopMost = False Then
+            Me.TopMost = True
+            MettreAuPremierPlanToolStripMenuItem.Checked = True
+        Else
+            Me.TopMost = False
+            MettreAuPremierPlanToolStripMenuItem.Checked = False
+        End If
+    End Sub
+    Sub Enregistrer()
+        MsgBox("Séléctionnez une ligne dans le chat", MsgBoxStyle.Critical, "Avertissement")
+        Dim sfd As New SaveFileDialog
+        sfd.Filter = "Fichier TXT|*.txt|Tout les fichiers|*.*"
+        sfd.FileName = "Enregistrement"
+        If sfd.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Dim sw As New System.IO.StreamWriter(sfd.FileName)
+            sw.WriteLine(ListBox1.Text)
+            sw.Close()
+        End If
+    End Sub
+
+    Private Sub SiteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SiteToolStripMenuItem.Click
+        Process.Start("http://cedced19.wordpress.com")
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Enregistrer()
     End Sub
 End Class
