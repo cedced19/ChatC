@@ -1,6 +1,6 @@
 Chat C
 ====
-[Site](http://cedced19.wordpress.com/chat/)
+[Site](http://cedced19.github.io/chatc/)
 
 [Download Client](https://raw.githubusercontent.com/cedced19/ChatC/master/setup/ChatC.exe)
 
