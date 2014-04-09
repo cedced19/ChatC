@@ -9,7 +9,7 @@ Chat C
 
 Le chat est basique pour le moment.
 
-"More security" c'est le slogan pour ce chat pas comme les autres !
+Il n'y as pas de sécurité car le web n'est pas sécurisé.
 
 Chat C Version Client :
 
