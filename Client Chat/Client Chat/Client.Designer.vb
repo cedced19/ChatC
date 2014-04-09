@@ -34,14 +34,14 @@ Partial Class Client
         Me.MettreAuPremierPlanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Droit.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 413)
+        Me.TextBox1.AllowDrop = True
+        Me.TextBox1.Location = New System.Drawing.Point(12, 416)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(531, 20)
         Me.TextBox1.TabIndex = 1
@@ -111,11 +111,6 @@ Partial Class Client
         Me.SiteToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
         Me.SiteToolStripMenuItem.Text = "Site"
         '
-        'SaveFileDialog1
-        '
-        Me.SaveFileDialog1.FileName = "Enregistrement"
-        Me.SaveFileDialog1.Title = "Enregistrer"
-        '
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(114, 439)
@@ -159,7 +154,6 @@ Partial Class Client
     Friend WithEvents MettreAuPremierPlanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents SiteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
     Friend WithEvents Button3 As System.Windows.Forms.Button
 
 End Class

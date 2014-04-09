@@ -110,4 +110,17 @@ Public Class Client
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Enregistrer()
     End Sub
+
+    Private Sub TextBox1_DragDrop(sender As Object, e As DragEventArgs) Handles TextBox1.DragDrop
+        If e.Data.GetDataPresent(DataFormats.Text) Then
+            TextBox1.Text = e.Data.GetData(DataFormats.Text)
+        End If
+    End Sub
+
+
+    Private Sub TextBox1_DragEnter(sender As Object, e As DragEventArgs) Handles TextBox1.DragEnter
+        If e.Data.GetDataPresent(DataFormats.Text) Then
+            e.Effect = DragDropEffects.All
+        End If
+    End Sub
 End Class
