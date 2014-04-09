@@ -11,11 +11,11 @@ Le chat est basique pour le moment.
 
 Il n'y as pas de sécurité car le web n'est pas sécurisé.
 
-Chat C Version Client :
+#Chat C Version Client :
 
 Connectez vous a un serveur via une ip
 
-Chat C Version Serveur :
+#Chat C Version Serveur :
 
 Cliquez.
 
