@@ -23,3 +23,6 @@ Puis partager l'ip aux futures utilisateurs !
 
 
 ![](demo.png)
+
+## License
+[CC BY-SA](http://creativecommons.org/licenses/by-sa/4.0/)
