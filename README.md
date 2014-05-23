@@ -1,6 +1,6 @@
 Chat C
 ====
-[Site](http://cedced19.github.io/chat/)
+[Site](http://cedced19.github.io/soft/chat/)
 
 
 Le chat est basique pour le moment.
