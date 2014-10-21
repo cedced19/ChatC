@@ -4,11 +4,11 @@
 
 ## Instalation
 
-1. [Download for Windows](dist/ChatC.zip)
+1. [Download for Windows](https://raw.githubusercontent.com/cedced19/ChatC/master/dist/ChatC.zip)
 2. Extract
 3. Execute `ChatC.exe`
 
-[!Windows](demo.png)
+![Demo](demo.png)
 
 ## To compile
 
