@@ -1,0 +1,30 @@
+{
+  "name": "ChatC",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cedced19/ChatC",
+    "bugs": "https://github.com/cedced19/ChatC/issues",
+    "author": {
+      "name": "Cédric",
+      "email": "cedced19@gmail.com",
+      "url": "https://github.com/cedced19"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/cedced19/ChatC.git"
+    },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-rename": "0.0.3",
+    "grunt-contrib-compress": "~0.9.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "load-grunt-tasks": "~0.4.0",
+    "time-grunt": "~0.3.1",
+    "concat-files": "~0.1.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}

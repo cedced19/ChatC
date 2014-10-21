@@ -1,28 +1,18 @@
-Chat C
-====
-[Site](http://cedced19.github.io/soft/chat/)
+# Chat C
 
+[![devDependency Status](https://david-dm.org/cedced19/ChatC-Web/dev-status.svg)](https://david-dm.org/cedced19/ChatC-Web#info=devDependencies)
 
-Le chat est basique pour le moment.
+## Instalation
 
-Il n'y as pas de sécurité car le web n'est pas sécurisé.
+1. [Download for Windows](dist/ChatC.zip)
+2. Extract
+3. Execute `ChatC.exe`
 
-###Chat C Version Client :
+[!Windows](demo.png)
 
-Connectez vous a un serveur via une ip.
-[Téléchargement du client](https://raw.githubusercontent.com/cedced19/ChatC/master/setup/ChatC.exe)
+## To compile
 
-###Chat C Version Serveur :
-
-Cliquez.
-[Téléchargement du serveur](https://raw.githubusercontent.com/cedced19/ChatC/master/setup/ServeurChat.exe)
-
-Ouvrez juste le port 2000 si vous voulez y accéder depuis l'extèrieur de chez vous.
-
-Puis partager l'ip aux futures utilisateurs !
-
-
-![](demo.png)
-
-## License
-[CC BY-SA](http://creativecommons.org/licenses/by-sa/4.0/)
+1. Download a version of [node-webkit](https://github.com/rogerwang/node-webkit)
+2. Move it in the folder `resources/node-webkit/OS NAME`
+3. Do `npm install && cd app/ && npm install && cd ../`
+4. Do either `grunt dist-linux` or `grunt dist-linux32` or `grunt dist-win` or `grunt dist-mac`
