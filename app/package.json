@@ -1,7 +1,7 @@
 {
   "name": "ChatC",
   "main": "views/index.html",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "single-instance": false,
   "window": {
     "title": "Chat C",
