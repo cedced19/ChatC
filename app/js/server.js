@@ -36,7 +36,6 @@
 
     // Socket.io
     var io = require('socket.io')(server);
-    io.set("origins = *");
     io.sockets.on('connection', function(socket){
         var me = false;
 
@@ -46,6 +45,8 @@
             if(messages.length > 10){
               messages.shift();
             }
+            displayMessage(me.username, message.message)
+            message.message = twttr.txt.autoLink(twttr.txt.htmlEscape(message.message));
             messages.push(message);
             io.sockets.emit('newmsg', message);
         });
@@ -68,6 +69,7 @@
            me.avatar = '//gravatar.com/avatar/' + me.id + '?s=50';
            socket.emit('logged');
            users[me.id] = me;
+           displayInfo(me.username,' is connected.');
            io.sockets.emit('newusr', me);
         }
       });
@@ -78,6 +80,7 @@
             }
            delete users[me.id];
            io.sockets.emit('disusr', me);
+           displayInfo(me.username, ' has left.');
         });
     });
 
@@ -89,5 +92,24 @@
       return (h < 10 ? '0' : '') + h + ':' + (m < 10 ? '0' : '') + m;
     }
 
+    function displayInfo(user, message) {
+      var div = $('<li>');
+      $('<span>').text('At ' + getTime() + ', ').appendTo(div);
+      $('<span>').text(getShiny(user)).addClass('color').appendTo(div);
+      $('<span>').text(message).appendTo(div);
+      div.appendTo('#infos');
+    }
+
+    function displayMessage(user, message) {
+      var div = $('<li>');
+      $('<span>').text('At ' + getTime() + ', ').appendTo(div);
+      $('<span>').text(getShiny(user)).addClass('color').appendTo(div);
+      $('<span>').text(' says "' + message + '".').appendTo(div);
+      div.appendTo('#infos');
+    }
+
+    function getShiny(string){
+      return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
+    }
 
 })(jQuery);

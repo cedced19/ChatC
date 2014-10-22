@@ -39,7 +39,7 @@
                       if(message == ''){
                           sweetAlert('Oops...', 'You must enter a  message!', 'error');
                         }else{
-                          socket.emit('newmsg', {message : twttr.txt.autoLink(twttr.txt.htmlEscape($('#message').val())) });
+                          socket.emit('newmsg', {message : $('#message').val() });
                           $('#message').val('');
                         };
                         $('#message').focus();
@@ -86,4 +86,11 @@
                     $('#messages').append( '<div class="message">' + Mustache.render(msg, message) + '</div>' );
                     $('#messages').animate({ scrollTop: $('#messages').prop('scrollHeight') }, 500);
             }
+            /*
+            $('body').on('click', 'a', function (event) {
+              event.preventDefault();
+              require('nw.gui').Shell.openExternal($(this).attr('href'));
+            });
+            */
+
             })(jQuery);
