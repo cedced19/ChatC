@@ -1,6 +1,6 @@
 # Chat C
 
-[![devDependency Status](https://david-dm.org/cedced19/ChatC-Web/dev-status.svg)](https://david-dm.org/cedced19/ChatC-Web#info=devDependencies)
+[![devDependency Status](https://david-dm.org/cedced19/ChatC/dev-status.svg)](https://david-dm.org/cedced19/ChatC#info=devDependencies)
 
 ## Instalation
 
