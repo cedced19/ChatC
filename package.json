@@ -20,11 +20,17 @@
     "grunt-contrib-compress": "~0.12.0",
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-copy": "~0.7.0",
-    "load-grunt-tasks": "~0.6.0",
+    "load-grunt-tasks": "~1.0.0",
     "time-grunt": "~1.0.0",
     "concat-files": "~0.1.0"
   },
   "engines": {
     "node": ">=0.8.0"
-  }
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://cedced19.github.io/license/"
+    }
+  ]
 }
