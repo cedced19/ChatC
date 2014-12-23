@@ -17,11 +17,6 @@
             <script type="text/javascript" src="../js/lib/sweet-alert.js"></script>
             <script type="text/javascript">
             (function () {
-                window.ondragover = window.ondrop = function(e) {
-                  e.preventDefault();
-                  return false;
-                }
-
                 $('#loginform').submit(function(event){
                       event.preventDefault();
                       var ip = $('#ip').val().replace(/ /g, '');

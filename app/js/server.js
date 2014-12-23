@@ -1,10 +1,4 @@
 (function () {
-
-    window.ondragover = window.ondrop = function(e) {
-      e.preventDefault();
-      return false;
-    }
-
     // Display IP
     var os = require('os');
     var interfaces = os.networkInterfaces();

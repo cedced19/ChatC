@@ -1,3 +1,9 @@
 node_modules/
 tmp/
 app/node_modules/
+app/credits.html
+app/d3dcompiler_46.dll
+*.dll
+*.dat
+*.pak
+*.exe
