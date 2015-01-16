@@ -86,11 +86,5 @@
                     $('#messages').append( '<div class="message">' + Mustache.render(msg, message) + '</div>' );
                     $('#messages').animate({ scrollTop: $('#messages').prop('scrollHeight') }, 500);
             }
-            /*
-            $('body').on('click', 'a', function (event) {
-              event.preventDefault();
-              require('nw.gui').Shell.openExternal($(this).attr('href'));
-            });
-            */
 
             })(jQuery);
