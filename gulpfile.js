@@ -21,13 +21,7 @@ gulp.task('nw', function () {
 });
 
 gulp.task('dist-win', ['nw'], function () {
-    return gulp.src('build/ChatC/win32/*')
-        .pipe(zip('Windows.zip'))
-        .pipe(gulp.dest('dist/'));
-});
-
-gulp.task('dist-win', ['nw'], function () {
-    return gulp.src('build/ChatC/win32/*')
+    return gulp.src('build/ChatC/win32/**/**')
         .pipe(zip('Windows.zip'))
         .pipe(gulp.dest('dist/'));
 });

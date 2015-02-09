@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat C</title>
+    <link rel="stylesheet" type="text/css" href="vendor/css/main.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css/sweet-alert.css">
+</head>
+<body>
+            <h3>Server</h3>
+            <a href="server.html" class="btn">Create a server</a>
+            <h3>Client</h3>
+            <form id="loginform">
+                  <input type="text" name="ip" id="ip" placeholder="IP">
+                  <input type="submit" value="Chat!" class="btn">
+            </form>
+            <script type="text/javascript" src="vendor/js/lib/jquery.min.js"></script>
+            <script type="text/javascript" src="vendor/js/lib/sweet-alert.js"></script>
+            <script type="text/javascript">
+            (function () {
+                $('#loginform').submit(function(event){
+                      event.preventDefault();
+                      var ip = $('#ip').val().replace(/ /g, '');
+                      if(ip == ''){
+                            sweetAlert('Oops...', 'You must enter a  ip!', 'error');
+                            return false;
+                      }
+                      location.replace("http:\/\/"+ $('#ip').val() +":7770\/client.html")
+                    });
+            })(jQuery);
+            </script>
+</body>
+</html>
