@@ -1,8 +1,8 @@
-# Chat C
+# Chat C for Desktop
 
-[![devDependency Status](https://david-dm.org/cedced19/ChatC/dev-status.svg)](https://david-dm.org/cedced19/ChatC#info=devDependencies)
+Just a simple software for chat!
 
-## Instalation
+## Installation
 
 1. [Download for Windows](https://raw.githubusercontent.com/cedced19/ChatC/master/dist/Windows.zip)
 2. Extract
