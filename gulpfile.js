@@ -4,7 +4,13 @@ var gutil = require('gulp-util');
 var zip = require('gulp-zip');
 var colors = require('colors');
 
-gulp.task('nw', function () {
+gulp.task('install', function () {
+    require('child_process').exec('npm install', {cwd: './app'}, function (err, stdout, stderr) {
+        return true;
+    });
+});
+
+gulp.task('nw', ['install'], function () {
 
     var nw = new builder({
         files: './app/**/**',
@@ -27,25 +33,25 @@ gulp.task('dist-win', ['nw'], function () {
 });
 
 gulp.task('dist-osx32', ['nw'], function () {
-    return gulp.src('build/ChatC/osx32/*')
+    return gulp.src('build/ChatC/osx32/**/**')
         .pipe(zip('OSX32.zip'))
         .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('dist-osx64', ['nw'], function () {
-    return gulp.src('build/ChatC/osx64/*')
+    return gulp.src('build/ChatC/osx64/**/**')
         .pipe(zip('OSX64.zip'))
         .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('dist-linux32', ['nw'], function () {
-    return gulp.src('build/ChatC/linux32/*')
+    return gulp.src('build/ChatC/linux32/**/**')
         .pipe(zip('Linux32.zip'))
         .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('dist-linux64', ['nw'], function () {
-    return gulp.src('build/ChatC/linux64/*')
+    return gulp.src('build/ChatC/linux64/**/**')
         .pipe(zip('Linux64.zip'))
         .pipe(gulp.dest('dist/'));
 });

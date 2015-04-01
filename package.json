@@ -2,22 +2,22 @@
   "name": "chatc-desktop",
   "version": "0.0.2",
   "homepage": "https://github.com/cedced19/chatc-desktop",
-    "bugs": "https://github.com/cedced19/chatc-desktop/issues",
-    "author": {
-      "name": "Cédric",
-      "email": "cedced19@gmail.com",
-      "url": "https://github.com/cedced19"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git://github.com/cedced19/chatc-desktop.git"
-    },
+  "bugs": "https://github.com/cedced19/chatc-desktop/issues",
+  "author": {
+    "name": "Cédric",
+    "email": "cedced19@gmail.com",
+    "url": "https://github.com/cedced19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cedced19/chatc-desktop.git"
+  },
   "devDependencies": {
+    "colors": "1.0.3",
     "gulp": "^3.8.10",
     "gulp-util": "^3.0.2",
     "gulp-zip": "^2.0.2",
-    "node-webkit-builder": "1.0.6",
-    "colors": "1.0.3"
+    "node-webkit-builder": "1.0.6"
   },
   "engines": {
     "node": ">=0.8.0"
