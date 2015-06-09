@@ -1,0 +1,345 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+body {
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  color: #4e4e4e; }
+
+audio{
+  display: none;}
+
+::selection{
+  color: #fff;
+  background-color: #f39c12;}
+
+ a{
+  text-decoration: none;
+  color: #87858F;
+  border-bottom:1px dotted #87858F;}
+
+#users {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #95a5a6;
+  width: 65px;}
+  #users img {
+    display: block;
+    margin: 5px;
+    position: relative;
+    -webkit-animation-name: "fadeInUp";
+    -moz-animation-name: "fadeInUp";
+    -ms-animation-name: "fadeInUp";
+    -o-animation-name: "fadeInUp";
+    animation-name: "fadeInUp";
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+   }
+
+#msgform {
+  position: fixed;
+  left: 65px;
+  right: 0;
+  bottom: 0;
+  background-color: #bdc3c7;
+  height: 50px; }
+  #msgform .text {
+        border: solid 3px #c9c9c9;
+        transition: border 0.3s;
+        font-size: 18px;
+        appearance: none;
+        box-shadow: none;
+        border-radius: none;
+        height: 40px;
+        position: fixed;
+        bottom: 5px;
+        left: 74px;
+        right: 9px;
+        width: 80%;
+        padding-left: 7px;}
+    #msgform .text:focus,
+    #msgform .text.focus {
+        border: solid 3px #969696;
+        outline: none;}
+
+   #msgform i{
+    position: fixed;
+    bottom: 9px;
+    right: 9px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;}
+
+   @media screen and (max-width: 700px) {
+      #msgform i{
+        display:none;
+        visibility:hidden;
+      }
+      #msgform .text{
+          width: 88%;
+      }
+    }
+
+#messages {
+  position: fixed;
+  top: 0;
+  left: 65px;
+  right: 0px;
+  bottom: 30px;
+  overflow: scroll;
+  padding: 10px; }
+  #messages .message {
+    display: block;
+    position: relative;
+    background-color: #FFF;
+    padding: 10px;
+    -webkit-animation-name: "fadeInRight";
+    animation-name: "fadeInRight";
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    border-style: solid;
+    border-width: 5px;
+    margin: 5px;}
+
+  
+  #messages img {
+    position: absolute;
+    display: block;}
+  #messages .info {
+    margin-left: 65px; }
+  #messages strong {
+    font-weight: bold;
+    color: #4e4e4e;
+    font-size: 14px; }
+  #messages p {
+    margin-bottom: 10px;
+    font-size: 14px; }
+  #messages .date {
+    font-size: 12px;
+    color: #ababab;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+    @media screen and (max-width: 290px) {
+      #messages .date{
+        display:none;
+        visibility:hidden;
+      }
+    }
+
+#msgtpl {
+  display: none; }
+
+#message {
+    outline: none;}
+
+#login {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000; }
+  #login #loginform {
+    background-color: #FFF;
+    width: 478px;
+    padding: 17px;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -256px;
+    margin-top: -200px; }
+    #login #loginform input[type="text"] {
+        display: inline-block;
+        padding: 10px;
+        border: solid 5px #c9c9c9;
+        transition: border 0.3s;
+        font-size: 18px;
+        appearance: none;
+        box-shadow: none;
+        border-radius: none;
+        margin-bottom: 10px;}
+    #login #loginform input[type="text"]:focus, #login #loginform input[type="text"].focus {
+        border: solid 5px #969696;
+        outline: none;}
+    #login #loginform input[type="submit"] {
+        display: inline-block;
+        padding: 0px 40px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 45px;
+        background-color: transparent;
+        background-color: rgba(243, 156, 18, 0);
+        border: 2px solid #f39c12;
+        cursor: pointer;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;}
+    #login #loginform input[type="submit"]:hover, #login #loginform input[type="submit"]:focus {
+        background-color: #f39c12;
+        border-color: #f39c12;
+        color: #FFF;}
+  #login p {
+    font-size: 1em;
+    padding: 20px;
+    color: #000;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7; }
+
+@-moz-keyframes fadeInUp {
+  0% {
+    -moz-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@-o-keyframes fadeInUp {
+  0% {
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@-ms-keyframes fadeInUp {
+  0% {
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@-moz-keyframes fadeInRight {
+  0% {
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+    opacity: 0; }
+
+  100% {
+    -moz-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; } }
+
+@-o-keyframes fadeInRight {
+  0% {
+    -o-transform: translateX(20px);
+    transform: translateX(20px);
+    opacity: 0; }
+
+  100% {
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; } }
+
+@-ms-keyframes fadeInRight {
+  0% {
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+    opacity: 0; }
+
+  100% {
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0; }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
