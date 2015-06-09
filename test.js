@@ -5,7 +5,7 @@ var time = require('./app/vendor/js/time'),
 
 describe('time-plugin', function () {
 
-    it('should give the time', function (done) {
+    it('should give the time', function () {
         time();
     });
 
@@ -13,7 +13,7 @@ describe('time-plugin', function () {
 
 describe('ip-plugin', function () {
 
-    it('should give the local ip', function (done) {
+    it('should give the local ip', function () {
         ip();
     });
 
