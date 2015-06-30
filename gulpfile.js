@@ -68,7 +68,7 @@ gulp.task('nw', ['minify', 'install'], function () {
 
     var nw = new builder({
         files: './app/**/**',
-        platforms: ['win32', 'osx32', 'osx64', 'linux32', 'linux64']
+        platforms: ['osx32', 'osx64', 'linux32', 'linux64']
     });
 
     nw.on('log', function (msg) {
@@ -127,4 +127,4 @@ gulp.task('dist-linux64', ['nw'], function () {
         .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('default', ['dist-win', 'dist-osx64', 'dist-osx32', 'dist-linux64', 'dist-linux32']);
+gulp.task('default', ['dist-osx64', 'dist-osx32', 'dist-linux64', 'dist-linux32']);

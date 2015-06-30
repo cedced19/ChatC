@@ -4,13 +4,20 @@ var md5 = require('./node_modules/MD5'),
     users = {},
     messages = [];
 
-app.connection({ port: 7770 }); 
+app.connection({ port: 7770 });
 
 app.route({
     method: 'GET',
     path: '/api/',
     handler: function (request, reply) {
-        reply({users: users, messages: messages});
+        var discret = {users: users, messages: messages};
+        for (var user in discret.users) {
+          delete discret.users[user].mail;
+        }
+        for (var message in discret.messages) {
+          delete discret.messages[message].user.mail;
+        }
+        reply(discret);
     }
 });
 
