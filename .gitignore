@@ -1,12 +1,6 @@
 node_modules
-minified
-tmp
-app/node_modules
-app/credits.html
-app/d3dcompiler_46.dll
-*.dll
-*.dat
-*.pak
-*.exe
-cache
 build
+app/node_modules
+cache
+minified
+dist
